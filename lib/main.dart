@@ -49,9 +49,18 @@ class _HomeBodyState extends State<HomeBody> {
           Card(
             child: Column(
               children: <Widget>[
+                SizedBox(
+                  height: 10,
+                ),
                 Text(
                   'Search GitHub Users',
-                  style: Theme.of(context).textTheme.headline1,
+                  style: Theme.of(context).textTheme.headline4.copyWith(
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black,
+                      ),
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 RichText(
                   text: TextSpan(
@@ -65,7 +74,21 @@ class _HomeBodyState extends State<HomeBody> {
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
                 TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Enter User Name',
+                    //in
+                    //enabledBorder: OutlineInputBorder(borderSide: BorderSide.(color: Theme.of(context).accentColor,))
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(5),
+                      ),
+                    ),
+                    focusColor: Colors.blueAccent,
+                  ),
                   autocorrect: false,
                 )
               ],
