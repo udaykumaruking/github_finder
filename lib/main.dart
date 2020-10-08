@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github_finder/styles/globals.dart';
 import 'screens/HomeBody.dart';
 
 void main() => runApp(MyApp());
@@ -9,26 +10,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'GitHub Finder',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        //brightness: Brightness.dark,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         //backgroundColor: ,
         body: SingleChildScrollView(
           child: HomeBody(),
         ),
-
-        // appBar: AppBar(
-        //   title: Text(
-        //     'GitHub Finder',
-        //     style: TextStyle(
-        //       color: Colors.white,
-        //     ),
-        //   ),
-        // ),
       ),
     );
   }

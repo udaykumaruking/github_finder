@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:github_finder/styles/globals.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AppBarCustom extends StatelessWidget {
@@ -23,11 +24,17 @@ class AppBarCustom extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text('GitHub Finder'),
+                Text(
+                  'GitHub Finder',
+                  style: TextStyle(
+                    color: blackColor,
+                  ),
+                ),
                 IconButton(
                   icon: Icon(
                     Octicons.mark_github,
                     size: 40,
+                    color: blackColor,
                   ),
                   onPressed: _launchURL,
                 ),
@@ -39,7 +46,7 @@ class AppBarCustom extends StatelessWidget {
             child: Divider(
               height: 1,
               thickness: 2,
-              color: Colors.blueAccent,
+              color: blueColor,
             ),
           ),
         ],

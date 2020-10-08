@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github_finder/styles/globals.dart';
 
 class SearchBar extends StatefulWidget {
   @override
@@ -25,13 +26,13 @@ class _SearchBarState extends State<SearchBar> {
           ),
           prefixIcon: Icon(
             Icons.search,
-            color: Colors.blue,
+            color: blueColor,
           ),
           labelText: 'Type Here',
           labelStyle: TextStyle(color: Colors.black),
           hintText: "Ex: udaykumaruking",
           filled: true,
-          fillColor: Colors.grey[200],
+          fillColor: whiteColor,
         ),
       ),
       padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
