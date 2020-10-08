@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'GitHub Finder',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blue,
         //visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
@@ -23,18 +23,53 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
         title: Text(
           'GitHub Finder',
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.search),
-            color: Colors.black,
-            onPressed: () {},
+      ),
+      body: HomeBody(),
+    );
+  }
+}
+
+class HomeBody extends StatefulWidget {
+  @override
+  _HomeBodyState createState() => _HomeBodyState();
+}
+
+class _HomeBodyState extends State<HomeBody> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: <Widget>[
+          Card(
+            child: Column(
+              children: <Widget>[
+                Text(
+                  'Search GitHub Users',
+                  style: Theme.of(context).textTheme.headline1,
+                ),
+                RichText(
+                  text: TextSpan(
+                    text: 'Enter a  ',
+                    style: DefaultTextStyle.of(context).style,
+                    children: <TextSpan>[
+                      TextSpan(
+                          text: 'Username',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      TextSpan(text: ' to fetch user profile and repositories'),
+                    ],
+                  ),
+                ),
+                TextField(
+                  autocorrect: false,
+                )
+              ],
+            ),
           ),
         ],
       ),
