@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         //backgroundColor: ,
-        body: HomeBody(),
+        body: SingleChildScrollView(
+          child: HomeBody(),
+        ),
 
         // appBar: AppBar(
         //   title: Text(
