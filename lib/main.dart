@@ -11,19 +11,22 @@ class MyApp extends StatelessWidget {
       title: 'GitHub Finder',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        //visualDensity: VisualDensity.adaptivePlatformDensity,
+        //brightness: Brightness.dark,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'GitHub Finder',
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
-        ),
+        //backgroundColor: ,
         body: HomeBody(),
+
+        // appBar: AppBar(
+        //   title: Text(
+        //     'GitHub Finder',
+        //     style: TextStyle(
+        //       color: Colors.white,
+        //     ),
+        //   ),
+        // ),
       ),
     );
   }
