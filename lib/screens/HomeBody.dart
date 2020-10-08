@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/appBarCustom.dart';
-import '../widgets/headerText.dart';
-import '../widgets/richText.dart';
-import '../widgets/search.dart';
+import '../widgets/widgets.dart';
 
 class HomeBody extends StatelessWidget {
   @override
@@ -10,21 +7,13 @@ class HomeBody extends StatelessWidget {
     return SafeArea(
       child: Column(
         children: <Widget>[
-          SizedBox(
-            height: 10,
-          ),
+          sizedBoxH(10),
           AppBarCustom(),
-          SizedBox(
-            height: 10,
-          ),
+          sizedBoxH(10),
           HeaderText(),
-          SizedBox(
-            height: 20,
-          ),
+          sizedBoxH(10),
           RichTextWidget(),
-          SizedBox(
-            height: 15,
-          ),
+          sizedBoxH(10),
           SearchBar(),
         ],
       ),
