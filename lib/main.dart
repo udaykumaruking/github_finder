@@ -46,53 +46,67 @@ class _HomeBodyState extends State<HomeBody> {
     return Container(
       child: Column(
         children: <Widget>[
-          Card(
-            child: Column(
-              children: <Widget>[
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  'Search GitHub Users',
-                  style: Theme.of(context).textTheme.headline4.copyWith(
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black,
-                      ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                RichText(
-                  text: TextSpan(
-                    text: 'Enter a  ',
-                    style: DefaultTextStyle.of(context).style,
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'Username',
-                          style: TextStyle(fontWeight: FontWeight.bold)),
-                      TextSpan(text: ' to fetch user profile and repositories'),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Enter User Name',
-                    //in
-                    //enabledBorder: OutlineInputBorder(borderSide: BorderSide.(color: Theme.of(context).accentColor,))
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(5),
-                      ),
+          Column(
+            children: <Widget>[
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                'Search GitHub Users',
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black,
                     ),
-                    focusColor: Colors.blueAccent,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              RichText(
+                text: TextSpan(
+                  text: 'Enter ',
+                  style: DefaultTextStyle.of(context).style,
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: 'Username',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    TextSpan(text: ' to fetch user profile and repositories'),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    width: 2,
+                    color: Colors.blue,
                   ),
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                      labelText: 'Enter User Name',
+                      hintText: 'Ex: udaykumaruking',
+                      // border: OutlineInputBorder(
+                      //   borderRadius: BorderRadius.circular(5),
+                      //   borderSide: BorderSide(
+                      //     style: BorderStyle.solid,
+                      //     color: Colors.blue,
+                      //   ),
+                      // ),
+                      border: InputBorder.none,
+                      icon: Icon(
+                        Icons.search,
+                      )),
                   autocorrect: false,
-                )
-              ],
-            ),
+                  cursorColor: Colors.black,
+                  onChanged: (value) {},
+                ),
+              ),
+            ],
           ),
         ],
       ),
