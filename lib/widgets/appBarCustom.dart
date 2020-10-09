@@ -1,22 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:github_finder/utils/launchURL.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../styles/globals.dart';
 
 class AppBarCustom extends StatelessWidget {
   @override
-  // ignore: override_on_non_overriding_member
-  _launchURL() async {
-    const url = 'https://github.com/udaykumaruking/github_finder';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
   Widget build(BuildContext context) {
     return Container(
       child: Column(
@@ -38,7 +28,8 @@ class AppBarCustom extends StatelessWidget {
                     size: 30,
                     color: blackColor,
                   ),
-                  onPressed: _launchURL,
+                  onPressed: () => launchURL(
+                      'https://github.com/udaykumaruking/github_finder'),
                 ),
               ],
             ),

@@ -19,7 +19,6 @@ class HomeBody extends StatelessWidget {
                 RichTextWidget(),
                 sizedBoxH(10),
                 SearchBar(),
-                FloatingAction(),
               ],
             ),
           ),
