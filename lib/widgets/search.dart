@@ -12,7 +12,9 @@ class _SearchBarState extends State<SearchBar> {
     return TextField(
       decoration: InputDecoration(
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.transparent),
+          borderSide: BorderSide(
+            color: Colors.transparent,
+          ),
           borderRadius: BorderRadius.all(
             Radius.circular(20),
           ),
@@ -21,11 +23,31 @@ class _SearchBarState extends State<SearchBar> {
           borderRadius: BorderRadius.all(
             Radius.circular(15),
           ),
-          borderSide: BorderSide(color: Colors.blue),
+          borderSide: BorderSide(
+            color: Colors.blue,
+          ),
         ),
         prefixIcon: Icon(
           Icons.search,
           color: blueColor,
+        ),
+        alignLabelWithHint: true,
+        suffixIcon: IconButton(
+          icon: Icon(
+            Icons.chevron_right,
+            size: 40,
+          ),
+          hoverColor: blackColor,
+          color: blackColor,
+          onPressed: () {},
+          //splashColor: blueColor,
+          splashRadius: 1,
+          //focusColor: blackColor,
+          padding: EdgeInsets.only(
+            right: 15,
+          ),
+          //highlightColor: blackColor,
+          tooltip: 'Search',
         ),
         labelText: 'Type Here',
         labelStyle: TextStyle(color: Colors.black),

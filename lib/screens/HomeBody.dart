@@ -17,7 +17,7 @@ class HomeBody extends StatelessWidget {
                 HeaderText(),
                 sizedBoxH(10),
                 RichTextWidget(),
-                sizedBoxH(10),
+                sizedBoxH(15),
                 SearchBar(),
               ],
             ),
