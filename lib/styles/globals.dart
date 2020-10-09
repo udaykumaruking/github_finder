@@ -18,3 +18,19 @@ const display1Head = TextStyle(
 );
 
 const leftAlign = Alignment.centerLeft;
+
+const display1text = TextStyle(
+  color: blackColor,
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 1,
+  fontStyle: FontStyle.italic,
+);
+
+const display2text = TextStyle(
+  color: blackColor,
+  fontSize: 20,
+  fontWeight: FontWeight.w800,
+  letterSpacing: 1,
+  fontStyle: FontStyle.normal,
+);
