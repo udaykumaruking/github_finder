@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:github_finder/styles/globals.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import '../styles/globals.dart';
 
 class HeaderText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text(
-      'Search GitHub Users',
-      style: Theme.of(context).textTheme.headline4.copyWith(
-            fontWeight: FontWeight.w600,
-            color: blackColor,
-          ),
+    return Align(
+      alignment: leftAlign,
+      child: Text(
+        'Search GitHub Users',
+        style: GoogleFonts.poppins(
+          textStyle: titleHeader,
+        ),
+      ),
     );
   }
 }

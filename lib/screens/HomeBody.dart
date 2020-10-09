@@ -10,11 +10,19 @@ class HomeBody extends StatelessWidget {
           sizedBoxH(10),
           AppBarCustom(),
           sizedBoxH(10),
-          HeaderText(),
-          sizedBoxH(10),
-          RichTextWidget(),
-          sizedBoxH(10),
-          SearchBar(),
+          Padding(
+            padding: const EdgeInsets.only(left: 10, right: 10),
+            child: Column(
+              children: <Widget>[
+                HeaderText(),
+                sizedBoxH(10),
+                RichTextWidget(),
+                sizedBoxH(10),
+                SearchBar(),
+                FloatingAction(),
+              ],
+            ),
+          ),
         ],
       ),
     );

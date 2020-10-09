@@ -4,3 +4,17 @@ const blackColor = Color(0xFF32424A);
 const blueColor = Color(0xFF4586ff);
 const tealColor = Color(0xFF01ecd5);
 const whiteColor = Color(0xFFf5f5f5);
+
+const titleHeader = TextStyle(
+  color: blackColor,
+  fontSize: 30,
+  fontWeight: FontWeight.w600,
+);
+
+const display1Head = TextStyle(
+  color: blackColor,
+  fontSize: 28,
+  fontWeight: FontWeight.w500,
+);
+
+const leftAlign = Alignment.centerLeft;

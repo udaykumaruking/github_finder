@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:github_finder/styles/globals.dart';
+
 import 'screens/HomeBody.dart';
 
 void main() => runApp(MyApp());

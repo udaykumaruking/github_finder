@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:github_finder/styles/globals.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../styles/globals.dart';
 
 class AppBarCustom extends StatelessWidget {
   @override
@@ -20,20 +22,20 @@ class AppBarCustom extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+            padding: EdgeInsets.fromLTRB(10, 0, 20, 0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
                   'GitHub Finder',
-                  style: TextStyle(
-                    color: blackColor,
+                  style: GoogleFonts.poppins(
+                    textStyle: titleHeader,
                   ),
                 ),
                 IconButton(
                   icon: Icon(
                     Octicons.mark_github,
-                    size: 40,
+                    size: 30,
                     color: blackColor,
                   ),
                   onPressed: _launchURL,
@@ -42,7 +44,7 @@ class AppBarCustom extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 15, bottom: 15),
+            margin: EdgeInsets.only(top: 5, bottom: 10),
             child: Divider(
               height: 1,
               thickness: 2,
